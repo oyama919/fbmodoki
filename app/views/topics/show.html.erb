@@ -1,2 +1,5 @@
-<h1>Topic#show</h1>
-<p>Find me in app/views/topic/show.html.erb</p>
+<%= @topic.title %>
+<%= @topic.content %>
+<%= @topic.user.name %>
+<%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
+<%= link_to '戻る', topics_path %>
