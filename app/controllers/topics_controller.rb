@@ -22,7 +22,8 @@ class TopicsController < ApplicationController
      @topic = Topic.new(topics_params)
      @topic.user_id = current_user.id
      if @topic.save
-       redirect_to topics_path, notice:"投稿しました"
+       redirect_to topics_path, notice:"投稿されました"
+       NoticeMailer.sendmail_topic(@topic).deliver
      else
        render 'new'
      end
