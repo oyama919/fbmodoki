@@ -2,4 +2,12 @@
 <%= @topic.content %>
 <%= @topic.user.name %>
 <%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
+<p>コメント一覧</p>
+  <div id="comments_area">
+    <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
+  </div>
+  <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
+  <% if current_user.id == @topic.user_id %>
+    <%= link_to '編集', edit_topic_path(@topic) %> |
+  <% end %>
 <%= link_to '戻る', topics_path %>
