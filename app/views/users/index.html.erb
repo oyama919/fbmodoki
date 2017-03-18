@@ -1,0 +1,10 @@
+<p>ユーザー</p>
+<% @users.each do |user| %>
+  <p><%= profile_img(user) %><p>
+  <p><%= user.email %></p>
+  <% if user.id != current_user.id %>
+    <p><%= link_to user.name, user %><p>
+    <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
+  <% end %>
+  <p><%= link_to user.name, user_path(user) %></p>
+<% end %>
