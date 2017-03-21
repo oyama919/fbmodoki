@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   #変数PERMISSIBLE_ATTRIBUTESに配列[:name :avatar :avatar_cache]を代入
   PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
 
+  def current_notifications
+    @notifications_count = Notification.where(user_id: current_user.id).where(read: false).count
+  end
+
   protected
 
   #deviseのストロングパラメーターにカラム追加するメソッドを定義
