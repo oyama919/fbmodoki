@@ -1,2 +1,86 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<section class="left-column">
+  <ul class="left_nav">
+    <li class="left_nav_item"><a href="">ニュースフィード</a></li>
+    <li class="left_nav_item"><a href="">Messenger</a></li>
+    <li class="left_nav_item"><a href="">ショートカット</a></li>
+    <li class="left_nav_item"><a href="">編集</a></li>
+    <li class="left_nav_item"><a href="">Ruby on Rails勉強会</a></li>
+    <li class="left_nav_item"><a href="">発見</a></li>
+    <li class="left_nav_item"><a href="">イベント</a></li>
+    <li class="left_nav_item"><a href="">Facebookページ</a></li>
+    <li class="left_nav_item"><a href="">グループ</a></li>
+    <li class="left_nav_item"><a href="">友達を検索</a></li>
+    <li class="left_nav_item"><a href="">友達リスト</a></li>
+    <li class="left_nav_item"><a href="">Poke</a></li>
+    <li class="left_nav_item"><a href="">インサイト</a></li>
+    <li class="left_nav_item"><a href="">写真</a></li>
+    <li class="left_nav_item"><a href="">過去のこの日</a></li>
+    <li class="left_nav_item"><a href="">ゲーム</a></li>
+    <li class="left_nav_item"><a href="">編集を提案</a></li>
+    <li class="left_nav_item"><a href="">クーポン</a></li>
+    <li class="left_nav_item"><a href="">ライブ動画</a></li>
+    <li class="left_nav_item"><a href="">支払い履歴</a></li>
+    <li class="left_nav_item"><a href="">ページフィード</a></li>
+    <li class="left_nav_item"><a href="">ゲームフィード</a></li>
+    <li class="left_nav_item"><a href="">アプリを管理</a></li>
+    <li class="left_nav_item"><a href="">販売グループ</a></li>
+    <li class="left_nav_item"><a href="">保存済み</a></li>
+    <li class="left_nav_item"><a href=""  id="left_nav-MoreTxtBtn" >もっと見る…</a></li>
+  </ul>
+  <div>
+    <p>作成</p>
+    <a href="">広告</a>
+    <a href="">ページ</a>
+    <a href="">グループ</a>
+    <a href="">イベント</a>
+  </div>
+</section>
+<section class="center-column cf">
+
+  <aside class="aside">
+    <div class="advertisement main-col-mb">
+      <div class="advertisement__head">
+        <p>広告</p>
+        <a class="">広告を作成</a>
+      </div>
+    </div>
+    <div class="language main-col-mb">
+      <a href="" class="current">日本語</a>
+      <a href="">English (US)</a>
+      <a href="">Español</a>
+      <a href="">Português (Brasil)</a>
+      <a href="">Français (France)</a>
+    </div>
+  </aside>
+
+  <div class="main-column main-col-mb">
+    <div class="top-edit">
+      <%= render partial: 'topics/form', locals: { topic: @topic }, remote: true%>
+    </div>
+    <div class="main-column-index">
+      <% @topics.each do |topic| %>
+        <div class="index-column main-col-mb">
+          <div class="index-column__head">
+            <%= link_to topic_path(topic) do %>
+              <%= profile_img(topic.user) %>
+            <% end %>
+            <div class="index-column__head__text-box">
+              <p class="index-column-name"><%= link_to topic_path(topic) do %><%= topic.user.name %><% end %></p>
+              <p class="index-column-time"><%= topic.created_at.strftime("%y/%m/%d %p %l:%M") %></p>
+            </div>
+          </div>
+
+          <p class="index-column-title"><%= topic.title %></p>
+          <p class="index-column-text"><%= topic.content %></p>
+          <% if topic.user_id = current_user.id %>
+            <div class="index-column__foot">
+              <%= link_to "編集", edit_topic_path(topic.id) %>
+              <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除しますか？'}%>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</section>

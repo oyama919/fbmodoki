@@ -1,3 +1,195 @@
 // Place all the styles related to the Top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 左カラム
+.left-column{
+  width: 180px;
+  float: left;
+}
+.left_nav_item:nth-child(n+11){
+  display: none;
+}
+.left_nav_item:last-child{
+  display: block;
+}
+
+// もっと見るボタン用
+#left_nav-MoreTxtBtn{
+  display: block;
+}
+.block{
+  display: block;
+}
+.hide{
+  display: none;
+}
+
+
+
+// 中央　2カラム
+.center-column{
+  margin-left: 181px;
+  padding-left: 11px;
+  padding-top: 11px;
+}
+//カラム下　共通マージン
+.main-col-mb{
+  margin-bottom: 11px;
+}
+
+
+
+// 広告　右カラム
+.aside{
+  float: right;
+  width: 310px;
+}
+.advertisement{
+  background: #fff;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.advertisement__head{
+  display: flex;
+  font-size: 13px;
+}
+.advertisement__head>p{
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  color: #90949c;
+}
+.advertisement__head>a{
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  color: #365899;
+}
+.language{
+  background: #fff;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.language>a{
+  font-size: 12px;
+}
+.language>a::after{
+  content:"・";
+  color: #90949c;
+}
+.language>a:not(.current){
+  color: #365899;
+}
+.language>a.current{
+  color: #90949c;
+}
+
+
+
+// メインカラム　中央のカラム
+.main-column{
+  width: 500px;
+  box-sizing: border-box;
+}
+.top-edit{
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.top-edit label{
+  margin-right: 5px;
+}
+.top-edit #topic_title{
+  flex-grow: 1;
+}
+.top-edit #topic_content{
+  flex-grow: 1;
+  resize: vertical;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.top-edit .topcic-title-box,.top-edit .topcic-content-box{
+  display: flex;
+  margin-bottom: 10px;
+}
+.topcic-submit-box{
+  text-align: right;
+}
+.top-edit input[type="submit"]{
+  background: #4267b2;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: inherit;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  line-height: 22px;
+  padding: 0 16px;
+  vertical-align: baseline;
+}
+.top-edit input[type="submit"]:hover{
+  background: #355089;
+}
+.index-column{
+  padding: 12px 12px 0;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.index-column__head{
+  display: table;
+}
+.index-column__head>a{
+  display: inline-block;
+  margin-right: 8px;
+}
+.index-column__head__text-box{
+  display: inline-table;
+  vertical-align: top;
+}
+.index-column-name>a{
+  color: #365899;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+.index-column-time{
+  color: #7f7f7f;
+  font-size: 12px;
+}
+.index-column-title{
+  font-size: 18px;
+  text-align: center;
+  color: #7f7f7f;
+  margin-bottom: 5px;
+}
+.index-column-text{
+  font-size: 16px;
+  color: #232323;
+  line-height: 1.8;
+}
+.index-column__foot{
+  border-top: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  margin-top: 11px;
+}
+.index-column__foot a{
+  color: #7f7f7f;
+  display: inline-block;
+  font-weight: 100;
+  line-height: 14px;
+  margin-right: 20px;
+  padding: 4px 4px 4px 0;
+}

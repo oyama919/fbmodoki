@@ -12,5 +12,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+
+  $("#left_nav-MoreTxtBtn").click(function(){
+      $("li.left_nav_item:nth-child(n+11)").css("display","block");
+      $("li.left_nav_item:last-child").css("display","none");
+      return false;
+  });
+
+  $(".rootBtn").click(function(){
+      window.location.href = "/";
+      console.log("location!");
+  });
+
+  $('.alert').ready(function(){
+    setTimeout(function(){
+      $('.alert').hide(1000);
+    },1200);
+  });
+
+});

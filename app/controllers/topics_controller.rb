@@ -14,19 +14,16 @@ class TopicsController < ApplicationController
     end
   end
 
-  def confirm
-    @topic = Topic.new(topics_params)
-  end
-
   def create
-     @topic = Topic.new(topics_params)
-     @topic.user_id = current_user.id
-     if @topic.save
-       redirect_to topics_path, notice:"投稿されました"
-       NoticeMailer.sendmail_topic(@topic).deliver
-     else
-       render 'new'
-     end
+    @topic = Topic.new(topics_params)
+    @topic.user_id = current_user.id
+    if @topic.save
+      redirect_to root_path, notice:"投稿されました"
+      NoticeMailer.sendmail_topic(@topic).deliver
+    else
+      redirect_to root_path, alert:"未入力の項目があります"
+      @topic = Topic.new(topics_params)
+    end
   end
 
   def edit

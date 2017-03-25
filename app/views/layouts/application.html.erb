@@ -8,46 +8,80 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://js.pusher.com/3.2/pusher.min.js"></script>
     <% if user_signed_in? %>
-      <script>
-        var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',{
-          encrypted: true
-        });
+    <script>
+        var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>', {encrypted: true});
 
         var channel = pusher.subscribe("user_<%= current_user.id %>_channel");
-        channel.bind('comment_created', function(data) {
-          alert(data.message);
+        channel.bind('comment_created', function (data) {
+            alert(data.message);
         });
-        channel.bind('notification_created', function(data) {
-          $('#unread_count').html(data.unread_counts);
+        channel.bind('notification_created', function (data) {
+            $('#unread_count').html(data.unread_counts);
         });
-      </script>
+    </script>
     <% end %>
   </head>
 
   <body>
-    <header class="header">
-      <nav class="gnav">
-        <ul>
-        <% if user_signed_in? %>
-          <li class="first"><%= link_to 'マイページ', edit_user_registration_path %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to 'ユーザー一覧', users_path if user_signed_in? %></li>
-          <li><%= link_to "メッセージ", conversations_path %></li>
-          <li><%= link_to "投稿", topics_path %></li>
-        <% else %>
-          <li class="first"><%= link_to 'ログイン', new_user_session_path %></li>
-          <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+    <div class="modal-bg">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header_left">
+              <h1 class="rootBtn">
+                  <div class="h1_logo">
+                      <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i>
+                  </div>
+              </h1>
+              <div class="head-search">
+                <form class="search_box" id="SearchBox" method="get" action="/users" role="search">
+                  <input type="text" class="inputtext" maxlength="100" aria-label="検索" placeholder="友達を見つける" spellcheck="false">
+                  <button class="reDesignedBtn" type="submit" title="友達を見つける" aria-label="検索">
+                    <span class="accessible_elem">友達を見つける</span>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+          </div>
+          <div class="header_right">
+              <nav class="gnav">
+                <ul>
+                  <% if user_signed_in? %>
+                    <li class="first"><%= link_to 'マイページ', user_path(current_user.id) %></li>
+                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                    <li><%= link_to 'ユーザー一覧', users_path if user_signed_in? %></li>
+                    <li><%= link_to "メッセージ", conversations_path %></li>
+                    <li><%= link_to "投稿", topics_path %></li>
+                  <% else %>
+                    <li class="first"><%= link_to 'ログイン', new_user_session_path %></li>
+                    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                  <% end %>
+                    <li>
+                    <%= link_to  notifications_index_path, class: "navbar-brand" do %>
+                      <i class="fa fa-bell fa-1x">
+                          <span id="unread_count"><%= @notifications_count %></span>
+                      </i>
+                    </li>
+                  <% end %>
+                </ul>
+              </nav>
+          </div>
+        </div><!--header__inner-->
+      </header>
+      <section class="contents">
+        <% if flash[:notice] %>
+          <div class="alert alert-success">
+            <%= flash[:notice] %>
+          </div>
         <% end %>
-          <li><%= link_to  notifications_index_path, class: "navbar-brand" do %>
-            <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
-          </li>
+        <% if flash[:alert] %>
+          <div class="alert alert-danger">
+            <%= flash[:alert] %>
+          </div>
         <% end %>
-        </ul>
-      </nav>
-    </header>
-    <section class="contents">
-      <p><%= notice %><%= alert%></p>
-      <%= yield %>
-    </section>
+
+        <%= yield %>
+
+      </section>
+    </div><!--modal-bg-->
   </body>
 </html>
