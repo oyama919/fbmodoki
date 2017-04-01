@@ -7,7 +7,7 @@ set :application, 'fbmodoki'
 set :repo_url, 'https://github.com/oyama919/fbmodoki'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
-set :branch, ENV['BRANCH'] || 'fb'
+set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
 set :deploy_to, '/var/www/fbmodoki'
