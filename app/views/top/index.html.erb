@@ -69,14 +69,15 @@
               <p class="index-column-time"><%= topic.created_at.strftime("%y/%m/%d %p %l:%M") %></p>
             </div>
           </div>
-
           <p class="index-column-title"><%= topic.title %></p>
           <p class="index-column-text"><%= topic.content %></p>
-          <% if topic.user_id = current_user.id %>
-            <div class="index-column__foot">
-              <%= link_to "編集", edit_topic_path(topic.id) %>
-              <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除しますか？'}%>
-            </div>
+          <% if user_signed_in? %>
+            <% if topic.user.id == current_user.id %>
+              <div class="index-column__foot">
+                <%= link_to "編集", edit_topic_path(topic.id) %>
+                <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除しますか？'}%>
+              </div>
+            <% end %>
           <% end %>
         </div>
       <% end %>

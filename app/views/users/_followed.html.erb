@@ -1,6 +1,7 @@
-<h1>followed</h1>
+<h2 class="title">フォロワー</h1>
 <ul>
   <% users.each do |user| %>
     <li clsss="list"><%= user.name%></li>
+    <li clsss="list"><%= profile_img(user) %><li>
   <% end %>
 </ul>

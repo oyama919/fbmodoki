@@ -28,9 +28,9 @@
         <div class="header__inner">
           <div class="header_left">
               <h1 class="rootBtn">
-                  <div class="h1_logo">
+                  <%= link_to root_path do %>
                       <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i>
-                  </div>
+                  <% end %>
               </h1>
               <div class="head-search">
                 <form class="search_box" id="SearchBox" method="get" action="/users" role="search">
@@ -43,27 +43,38 @@
               </div>
           </div>
           <div class="header_right">
-              <nav class="gnav">
-                <ul>
-                  <% if user_signed_in? %>
-                    <li class="first"><%= link_to 'マイページ', user_path(current_user.id) %></li>
+            <div class="header-user">
+              <% if user_signed_in? %>
+                <%= link_to edit_user_registration_path do %>
+                  <%= profile_img(current_user)%>
+                  <%= current_user.name %>
+                <% end %>
+                </a>
+              <% end %>
+            </div>
+            </div>
+            <nav class="gnav">
+              <ul>
+                <% if user_signed_in? %>
+                  <li class="first"><%= link_to 'フォロー', users_path %></li>
+                  <li><%= link_to "メッセージ", conversations_path %></li>
+                  <ul class="toggle">
                     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-                    <li><%= link_to 'ユーザー一覧', users_path if user_signed_in? %></li>
-                    <li><%= link_to "メッセージ", conversations_path %></li>
-                    <li><%= link_to "投稿", topics_path %></li>
-                  <% else %>
-                    <li class="first"><%= link_to 'ログイン', new_user_session_path %></li>
-                    <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-                  <% end %>
-                    <li>
-                    <%= link_to  notifications_index_path, class: "navbar-brand" do %>
-                      <i class="fa fa-bell fa-1x">
-                          <span id="unread_count"><%= @notifications_count %></span>
-                      </i>
-                    </li>
-                  <% end %>
-                </ul>
-              </nav>
+                    <!-- <li><%= link_to "広告を作成する", conversations_path %></li> -->
+                  </ul>
+                <% else %>
+                  <li class="first"><%= link_to 'ログイン', new_user_session_path %></li>
+                  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                <% end %>
+                  <li>
+                  <%= link_to  notifications_index_path, class: "navbar-brand" do %>
+                    <i class="fa fa-bell fa-1x">
+                        <span id="unread_count"><%= @notifications_count %></span>
+                    </i>
+                  </li>
+                <% end %>
+              </ul>
+            </nav>
           </div>
         </div><!--header__inner-->
       </header>

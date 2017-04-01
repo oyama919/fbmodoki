@@ -1,8 +1,10 @@
-<%= @topic.title %>
-<%= @topic.content %>
-<%= @topic.user.name %>
-<%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
-<p>コメント一覧</p>
+<article class="article">
+  <h2 class="title">投稿記事</h2>
+  <p><%= @topic.user.name %></p>
+  <p><%= @topic.title %></p>
+  <p><%= @topic.content %></p>
+</article>
+<h2 class="title">コメント一覧</h2>
   <div id="comments_area">
     <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
   </div>

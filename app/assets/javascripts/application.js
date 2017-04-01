@@ -26,7 +26,6 @@ $(function(){
 
   $(".rootBtn").click(function(){
       window.location.href = "/";
-      console.log("location!");
   });
 
   $('.alert').ready(function(){

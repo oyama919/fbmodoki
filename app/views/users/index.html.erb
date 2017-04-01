@@ -1,11 +1,13 @@
-<p>ユーザー</p>
-<% @users.each do |user| %>
-  <p><%= profile_img(user) %><p>
-  <p><%= user.email %></p>
-  <% if user.id != current_user.id %>
-    <p><%= link_to user.name, user %><p>
-    <p><%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
-    <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
+<div class="user-content">
+  <h2 class="title">友達をフォローしよう</h2>
+  <% @users.each do |user| %>
+    <div class="user-article">
+      <% if user.id != current_user.id %>
+        <p><%= profile_img(user) %><p>
+        <p>ユーザー名：<%= link_to user.name, user %><p>
+        <p><%= link_to 'メッセージを送る', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+        <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
+      <% end %>
+    </div>
   <% end %>
-  <p><%= link_to user.name, user_path(user) %></p>
-<% end %>
+</div>

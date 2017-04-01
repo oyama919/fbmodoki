@@ -1,3 +1,45 @@
 // Place all the styles related to the topic controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.article{
+  width: 500px;
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+  .title{
+    margin-bottom: 30px;
+  }
+  p{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+  margin-bottom: 30px;
+}
+.new_comment{
+  width: 500px;
+  margin: 0 auto 30px;
+}
+.edit-content{
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  .topcic-submit-box{
+    text-align: center;
+  }
+  label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  textarea,input{
+    width: 500px;
+  }
+  input[type="submit"]{
+    margin: 30px auto 0;
+  }
+  img{
+    width: 100px;
+  }
+}

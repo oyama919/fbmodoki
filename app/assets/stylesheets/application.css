@@ -75,6 +75,10 @@ a{
 body{
   background: #E9EBEE;
 }
+.title{
+  font-size: 20px;
+  margin: 20px auto;
+}
 textarea,input{
   border: 1px solid #efefef;
   outline: none;
@@ -95,15 +99,21 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 .toggle{
   display: none;
 }
+h1{
+  height: 25px;
+  padding: 8px 5px 0 0;
+}
 .rootBtn{
   display: block;
 }
 .header{
   background: #3B5998;
-  padding: 9px 42px;
+  padding: 0 42px;
   box-sizing: border-box;
   height: 42px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__inner{
   width: 1012px;
@@ -160,19 +170,42 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   border-radius: 3px;
 }
 .header_left, .header_right {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header_left {
-    flex: 1 1 auto;
-    justify-content: flex-start;
+  flex: 1 1 auto;
+  justify-content: flex-start;
 }
 .header_right {
-    flex: 0 0 auto;
-    justify-content: flex-end;
+  flex: 0 0 auto;
+  justify-content: flex-end;
 }
-
+.header-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-user a img{
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+.header-user a{
+  color: #fff;
+  padding:  0 10px;
+  font-size: 12px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  display: inline-flex;
+  align-items: center;
+}
 .gnav ul{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
 }
 .gnav .first a{border-left: 1px solid #355089;}
 .gnav a{
@@ -200,4 +233,34 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .alert{
   opacity: 1;
+}
+input[type="submit"]{
+  background: #4267b2;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: inherit;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  line-height: 22px;
+  padding: 0 16px;
+  vertical-align: baseline;
+  margin-top: 30px;
+  width: 178px;
+}
+input[type="submit"]:hover{
+  color: #fff;
+  background: #355089;
+}
+/*form .button-large{
+  padding: 5px;
+  width: 300px;
+}*/
+form .btn-cancel{
+  color: #333;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #333;
+}
+form .btn-cancel:hover{
+  background: rgba(0,0,0,0.56);
+  border-color: transparent;
 }

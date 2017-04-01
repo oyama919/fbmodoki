@@ -109,6 +109,7 @@
 }
 .top-edit label{
   margin-right: 5px;
+  width: 70px;
 }
 .top-edit #topic_title{
   flex-grow: 1;
@@ -125,17 +126,6 @@
 }
 .topcic-submit-box{
   text-align: right;
-}
-.top-edit input[type="submit"]{
-  background: #4267b2;
-  border: none;
-  color: #fff;
-  font-size: 12px;
-  font-family: inherit;
-  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
-  line-height: 22px;
-  padding: 0 16px;
-  vertical-align: baseline;
 }
 .top-edit input[type="submit"]:hover{
   background: #355089;

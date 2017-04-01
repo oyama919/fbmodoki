@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <h2>新規登録</h2>
+<div class="user-content">
+  <h2 class="title">新規登録</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_messages! %>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "サインアップ", class: "btn btn-primary btn-block" %>
+      <%= f.submit "新規登録する", class: "button-large" %>
     </div>
   <% end %>
 

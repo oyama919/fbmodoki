@@ -2,11 +2,11 @@
   <div class="topcic-title-box">
     <%= f.error_messages! %>
     <%= f.label :タイトル %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="topcic-content-box">
     <%= f.label :内容 %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "form-control" %>
   </div>
   <div class="topcic-submit-box">
     <%= f.submit '投稿する' %>

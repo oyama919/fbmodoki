@@ -1,6 +1,15 @@
-<h2>メッセージ一覧</h2>
-<% @conversations.each do |conversation| %>
-  <% if conversation.target_user(current_user).present? %>
-    <%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%>
+<div class="user-content">
+  <h2 class="title">メッセージ一覧</h2>
+  <% @conversations.each do |conversation| %>
+    <% if conversation.target_user(current_user).present? %>
+      <div class="message-user">
+        <%= link_to conversation_messages_path(conversation) do%>
+          <%= profile_img(current_user)%>
+          <%= conversation.target_user(current_user).name %>
+        <% end %>
+      </div>
+    <% else %>
+      <p>現在メッセージはありません</p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
