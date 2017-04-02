@@ -1,0 +1,266 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+/*
+*= require_tree .
+*= require_self
+*/
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers
+*/
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* 追加リセット */
+a{
+  color: #333;
+  text-decoration: none;
+}
+/* ========== reset end ========== */
+
+body{
+  background: #E9EBEE;
+}
+.title{
+  font-size: 20px;
+  margin: 20px auto;
+}
+textarea,input{
+  border: 1px solid #efefef;
+  appearance: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: normal;
+}
+.cf:after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.toggle{
+  display: none;
+}
+h1{
+  height: 25px;
+  padding: 8px 5px 0 0;
+}
+.rootBtn{
+  display: block;
+}
+.header{
+  background: #3B5998;
+  padding: 0 42px;
+  box-sizing: border-box;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__inner{
+  width: 1012px;
+  margin: auto;
+  display: flex;
+}
+.h1_logo{
+  margin: 9px 0;
+  margin-right: 5px;
+}
+.fa-facebook-official{
+  color: #fff;
+  font-size: 28px;
+  line-height: 0;
+}
+.head-search{width: 450px;}
+.header .search_box{
+  position: relative;
+  width: auto;
+}
+.header .search_box button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 46px;
+  background-color: #f6f7f9;
+  background-image: none;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  display: block;
+  padding: 0 16px 0 16px;
+}
+.accessible_elem{
+  display: none;
+}
+.inputtext{
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 3px 52px 2px 7px;
+  width: 100%;
+  height: 25px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: inherit;
+  color: #1d2129;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  border-radius: 3px;
+}
+.header_left, .header_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_left {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+.header_right {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+.header-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-user a img{
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+.header-user a{
+  color: #fff;
+  padding:  0 10px;
+  font-size: 12px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  display: inline-flex;
+  align-items: center;
+}
+.gnav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+.gnav .first a{border-left: 1px solid #355089;}
+.gnav a{
+  color: #fff;
+  padding:  0 10px;
+  font-size: 12px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  border-right: 1px solid #355089;
+}
+.gnav a:hover{background: #355089;}
+.gnav a{text-decoration: none;}
+.gnav .navbar-brand{
+  border: none;
+  height: 20px;
+}
+.contents{
+  padding-top: 12px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "San Francisco", -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  color: #1d2129;
+  width: 1014px;
+  margin: auto;
+  position: relative;
+}
+.alert{
+  opacity: 1;
+}
+input[type="submit"]{
+  background: #4267b2;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: inherit;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  line-height: 22px;
+  padding: 0 16px;
+  vertical-align: baseline;
+  margin-top: 30px;
+  width: 178px;
+}
+input[type="submit"]:hover{
+  color: #fff;
+  background: #355089;
+}
+/*form .button-large{
+  padding: 5px;
+  width: 300px;
+}*/
+form .btn-cancel{
+  color: #333;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #333;
+}
+form .btn-cancel:hover{
+  background: rgba(0,0,0,0.56);
+  border-color: transparent;
+}
