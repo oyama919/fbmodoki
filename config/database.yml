@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: fbmodoki_production
+  database: fbmodoki
   username: fbmodoki
   password: <%= ENV['FBMODOKI_DATABASE_PASSWORD'] %>
