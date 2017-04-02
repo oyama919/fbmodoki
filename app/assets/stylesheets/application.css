@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 
@@ -101,7 +102,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 h1{
   height: 25px;
-  padding: 8px 5px 0 0;
+  padding: 0 5px 0 0;
 }
 .rootBtn{
   display: block;
@@ -120,9 +121,9 @@ h1{
   margin: auto;
   display: flex;
 }
-.h1_logo{
-  margin: 9px 0;
-  margin-right: 5px;
+h1 a{
+  margin: -3px 0 0;
+  display: block;
 }
 .fa-facebook-official{
   color: #fff;
