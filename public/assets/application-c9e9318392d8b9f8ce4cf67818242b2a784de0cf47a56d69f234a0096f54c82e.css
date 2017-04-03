@@ -1,0 +1,764 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+
+
+*/
+
+/* line 5, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/comments.scss */
+.comments {
+  width: 500px;
+  margin: auto;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* line 12, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/comments.scss */
+p {
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* line 16, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/comments.scss */
+p.right {
+  text-align: right;
+}
+/* line 4, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/messages.scss */
+.message-content {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+}
+/* line 9, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/messages.scss */
+.message-content p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+/* line 13, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/messages.scss */
+.message-content input {
+  padding: 5px 10px;
+  width: 350px;
+  margin: 0 auto 5px;
+}
+/* line 18, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/messages.scss */
+.message-content input[type="submit"] {
+  width: 200px;
+  padding: 8px 0;
+}
+/* line 4, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/notifications.scss */
+.contents {
+  text-align: center;
+}
+@charset "UTF-8";
+/* line 6, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.left-column {
+  width: 180px;
+  float: left;
+}
+
+/* line 10, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.left_nav_item:nth-child(n+11) {
+  display: none;
+}
+
+/* line 13, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.left_nav_item:last-child {
+  display: block;
+}
+
+/* line 18, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+#left_nav-MoreTxtBtn {
+  display: block;
+}
+
+/* line 21, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.block {
+  display: block;
+}
+
+/* line 24, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.hide {
+  display: none;
+}
+
+/* line 31, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.center-column {
+  margin-left: 181px;
+  padding-left: 11px;
+  padding-top: 11px;
+}
+
+/* line 37, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.main-col-mb {
+  margin-bottom: 11px;
+}
+
+/* line 44, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.aside {
+  float: right;
+  width: 310px;
+}
+
+/* line 48, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.advertisement {
+  background: #fff;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* line 57, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.advertisement__head {
+  display: flex;
+  font-size: 13px;
+}
+
+/* line 61, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.advertisement__head > p {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  color: #90949c;
+}
+
+/* line 66, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.advertisement__head > a {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  color: #365899;
+}
+
+/* line 71, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.language {
+  background: #fff;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* line 80, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.language > a {
+  font-size: 12px;
+}
+
+/* line 83, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.language > a::after {
+  content: "・";
+  color: #90949c;
+}
+
+/* line 87, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.language > a:not(.current) {
+  color: #365899;
+}
+
+/* line 90, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.language > a.current {
+  color: #90949c;
+}
+
+/* line 97, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.main-column {
+  width: 500px;
+  box-sizing: border-box;
+}
+
+/* line 101, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit {
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* line 110, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit label {
+  margin-right: 5px;
+  width: 70px;
+}
+
+/* line 114, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit #topic_title {
+  flex-grow: 1;
+}
+
+/* line 117, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit #topic_content {
+  flex-grow: 1;
+  resize: vertical;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* line 123, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit .topcic-title-box, .top-edit .topcic-content-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* line 127, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.topcic-submit-box {
+  text-align: right;
+}
+
+/* line 130, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.top-edit input[type="submit"]:hover {
+  background: #355089;
+}
+
+/* line 133, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column {
+  padding: 12px 12px 0;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* line 141, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column__head {
+  display: table;
+}
+
+/* line 144, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column__head > a {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* line 148, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column__head__text-box {
+  display: inline-table;
+  vertical-align: top;
+}
+
+/* line 152, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column-name > a {
+  color: #365899;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 158, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column-time {
+  color: #7f7f7f;
+  font-size: 12px;
+}
+
+/* line 162, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column-title {
+  font-size: 18px;
+  text-align: center;
+  color: #7f7f7f;
+  margin-bottom: 5px;
+}
+
+/* line 168, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column-text {
+  font-size: 16px;
+  color: #232323;
+  line-height: 1.8;
+}
+
+/* line 173, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column__foot {
+  border-top: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  margin-top: 11px;
+}
+
+/* line 178, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/top.scss */
+.index-column__foot a {
+  color: #7f7f7f;
+  display: inline-block;
+  font-weight: 100;
+  line-height: 14px;
+  margin-right: 20px;
+  padding: 4px 4px 4px 0;
+}
+/* line 4, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.article {
+  width: 500px;
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 30px;
+}
+/* line 9, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.article .title {
+  margin-bottom: 30px;
+}
+/* line 12, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.article p {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* line 19, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.new_comment {
+  width: 500px;
+  margin: 0 auto 30px;
+}
+
+/* line 23, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+}
+/* line 28, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content .topcic-submit-box {
+  text-align: center;
+}
+/* line 31, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+/* line 36, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content textarea, .edit-content input {
+  width: 500px;
+}
+/* line 39, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content input[type="submit"] {
+  margin: 30px auto 0;
+}
+/* line 42, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/topic.scss */
+.edit-content img {
+  width: 100px;
+}
+/* line 4, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content {
+  text-align: center;
+  line-height: 1.8;
+}
+/* line 7, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+/* line 11, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content input {
+  padding: 5px 10px;
+  width: 350px;
+  margin: 0 auto 5px;
+}
+/* line 16, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content input[type="checkbox"] {
+  width: auto;
+}
+/* line 19, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content input[type="file"] {
+  border: none;
+}
+/* line 22, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content img {
+  width: 100px;
+}
+/* line 25, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content .message-user {
+  width: 300px;
+  margin: auto;
+}
+/* line 28, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content .message-user a {
+  display: flex;
+  align-items: center;
+}
+/* line 32, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-content .message-user img {
+  width: 50px;
+  margin-right: 50px;
+}
+
+/* line 38, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-article {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 41, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.user-article input[type="submit"] {
+  margin-top: 10px;
+}
+
+/* line 46, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.my-page .title {
+  margin-bottom: 0;
+}
+/* line 49, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.my-page input {
+  margin-bottom: 12px;
+}
+/* line 52, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/users.scss */
+.my-page input[type="submit"] {
+  margin: 0 auto;
+}
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+/*
+
+
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+/* line 28, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers
+*/
+/* line 50, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 53, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+body {
+  line-height: 1;
+}
+
+/* line 56, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 59, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 62, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 67, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 追加リセット */
+/* line 73, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ========== reset end ========== */
+/* line 79, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+body {
+  background: #E9EBEE;
+}
+
+/* line 82, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.title {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+/* line 86, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+textarea, input {
+  border: 1px solid #efefef;
+  appearance: none;
+}
+
+/* line 90, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: normal;
+}
+
+/* line 95, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.cf:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* line 100, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.toggle {
+  display: none;
+}
+
+/* line 103, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+h1 {
+  height: 25px;
+  padding: 8px 5px 0 0;
+}
+
+/* line 107, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.rootBtn {
+  display: block;
+}
+
+/* line 110, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header {
+  background: #3B5998;
+  padding: 0 42px;
+  box-sizing: border-box;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 119, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header__inner {
+  width: 1012px;
+  margin: auto;
+  display: flex;
+}
+
+/* line 124, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.h1_logo {
+  margin: 9px 0;
+  margin-right: 5px;
+}
+
+/* line 128, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.fa-facebook-official {
+  color: #fff;
+  font-size: 28px;
+  line-height: 0;
+}
+
+/* line 133, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.head-search {
+  width: 450px;
+}
+
+/* line 134, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header .search_box {
+  position: relative;
+  width: auto;
+}
+
+/* line 138, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header .search_box button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 46px;
+  background-color: #f6f7f9;
+  background-image: none;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  display: block;
+  padding: 0 16px 0 16px;
+}
+
+/* line 152, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.accessible_elem {
+  display: none;
+}
+
+/* line 155, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.inputtext {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 3px 52px 2px 7px;
+  width: 100%;
+  height: 25px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: inherit;
+  color: #1d2129;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  border-radius: 3px;
+}
+
+/* line 173, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header_left, .header_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 178, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header_left {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+
+/* line 182, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header_right {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+}
+
+/* line 186, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 191, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header-user a img {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+
+/* line 197, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.header-user a {
+  color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* line 205, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/* line 211, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav .first a {
+  border-left: 1px solid #355089;
+}
+
+/* line 212, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav a {
+  color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  border-right: 1px solid #355089;
+}
+
+/* line 219, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav a:hover {
+  background: #355089;
+}
+
+/* line 220, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav a {
+  text-decoration: none;
+}
+
+/* line 221, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.gnav .navbar-brand {
+  border: none;
+  height: 20px;
+}
+
+/* line 225, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.contents {
+  padding-top: 12px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "San Francisco", -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  color: #1d2129;
+  width: 1014px;
+  margin: auto;
+  position: relative;
+}
+
+/* line 235, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+.alert {
+  opacity: 1;
+}
+
+/* line 238, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+input[type="submit"] {
+  background: #4267b2;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: inherit;
+  transition: 200ms cubic-bezier(0.08, 0.52, 0.52, 1) background-color, 200ms cubic-bezier(0.08, 0.52, 0.52, 1) box-shadow, 200ms cubic-bezier(0.08, 0.52, 0.52, 1) transform;
+  line-height: 22px;
+  padding: 0 16px;
+  vertical-align: baseline;
+  margin-top: 30px;
+  width: 178px;
+}
+
+/* line 251, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+input[type="submit"]:hover {
+  color: #fff;
+  background: #355089;
+}
+
+/*form .button-large{
+  padding: 5px;
+  width: 300px;
+}*/
+/* line 259, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+form .btn-cancel {
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #333;
+}
+
+/* line 264, /Users/junoyama/kadai/fbmodoki/app/assets/stylesheets/application.css.scss */
+form .btn-cancel:hover {
+  background: rgba(0, 0, 0, 0.56);
+  border-color: transparent;
+}
