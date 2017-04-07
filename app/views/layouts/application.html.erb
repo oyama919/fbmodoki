@@ -29,7 +29,7 @@
           <div class="header_left">
               <h1 class="rootBtn">
                   <%= link_to root_path do %>
-                      <i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
                   <% end %>
               </h1>
               <div class="head-search">
@@ -56,14 +56,14 @@
             <nav class="gnav">
               <ul>
                 <% if user_signed_in? %>
-                  <li class="first"><%= link_to 'フォロー', users_path %></li>
+                  <li><%= link_to 'フォロー', users_path %></li>
                   <li><%= link_to "メッセージ", conversations_path %></li>
                   <ul class="toggle">
                     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
                     <!-- <li><%= link_to "広告を作成する", conversations_path %></li> -->
                   </ul>
                 <% else %>
-                  <li class="first"><%= link_to 'ログイン', new_user_session_path %></li>
+                  <li><%= link_to 'ログイン', new_user_session_path %></li>
                   <li><%= link_to 'サインアップ', new_user_registration_path %></li>
                 <% end %>
                   <li>

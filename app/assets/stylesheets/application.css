@@ -92,12 +92,11 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 .toggle{
   display: none;
 }
-h1{
-  height: 25px;
-  padding: 0 5px 0 0;
-}
-.rootBtn{
-  display: block;
+h1.rootBtn{
+  display: flex;
+  align-items: center;
+  margin: 2px 7px 0 0;
+  font-size: 28px;
 }
 .header{
   background: #3B5998;
@@ -131,7 +130,7 @@ h1 a{
   position: absolute;
   top: 0;
   right: 0;
-  height: 25px;
+  height: 24px;
   width: 46px;
   background-color: #f6f7f9;
   background-image: none;
@@ -150,7 +149,7 @@ h1 a{
   margin: 0;
   padding: 3px 52px 2px 7px;
   width: 100%;
-  height: 25px;
+  height: 24px;
   font-size: 14px;
   line-height: 18px;
   font-family: inherit;
@@ -171,9 +170,18 @@ h1 a{
   flex: 1 1 auto;
   justify-content: flex-start;
 }
+.left_nav_item>a{
+  color: #1d2129;
+}
+.left_nav_item>a{
+  color: inherit;
+}
 .header_right {
   flex: 0 0 auto;
   justify-content: flex-end;
+}
+.header_right a{
+  height: 30px;
 }
 .header-user{
   display: flex;
@@ -199,16 +207,30 @@ h1 a{
   justify-content: center;
   align-items: center;
   height: 30px;
+  margin: 0;
 }
-.gnav .first a{border-left: 1px solid #355089;}
 .gnav a{
   color: #fff;
   padding:  0 10px;
   font-size: 12px;
   font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
-  border-right: 1px solid #355089;
+  position: relative;
+  height: 30px;
 }
-.gnav a:hover{background: #355089;}
+.header-user a:hover,.gnav a:hover{
+  background: #355089;
+  color: #fff;
+}
+.gnav li a::after{
+  background: rgba(0, 0, 0, .1);
+  content: '';
+  display: block;
+  height: 18px;
+  left: -1px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
 .gnav a{text-decoration: none;}
 .gnav .navbar-brand{
   border: none;
@@ -220,7 +242,7 @@ h1 a{
   line-height: 19px;
   font-family: "San Francisco", -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
   color: #1d2129;
-  width: 1014px;
+  width: 1020px;
   margin: auto;
   position: relative;
 }
