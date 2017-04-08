@@ -6,9 +6,9 @@
 
   <% @messages.each do |message| %>
     <% if message.body %>
-      <p><% user = User.find(message.user_id) %><p>
-      <p><%= user.name %></strong> <%= message.message_time %><p>
-      <p><%= message.body %><p>
+      <p><% user = User.find(message.user_id) %></p>
+      <p><b><%= user.name %></b>　<small><%= message.message_time %></small></p>
+      <p><%= message.body %></p>
     <% end %>
   <% end %>
 

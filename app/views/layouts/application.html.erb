@@ -23,76 +23,74 @@
   </head>
 
   <body>
-    <div class="modal-bg">
-      <header class="header">
-        <div class="header__inner">
-          <div class="header_left">
-              <h1 class="rootBtn">
-                  <%= link_to root_path do %>
-                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                  <% end %>
-              </h1>
-              <div class="head-search">
-                <form class="search_box" id="SearchBox" method="get" action="/users" role="search">
-                  <input type="text" class="inputtext" maxlength="100" aria-label="検索" placeholder="友達を見つける" spellcheck="false">
-                  <button class="reDesignedBtn" type="submit" title="友達を見つける" aria-label="検索">
-                    <span class="accessible_elem">友達を見つける</span>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form>
-              </div>
+    <div class="modal-bg"></div><!--modal-bg-->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header_left">
+          <h1 class="rootBtn">
+              <%= link_to root_path do %>
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              <% end %>
+          </h1>
+          <div class="head-search">
+            <form class="search_box" id="SearchBox" method="get" action="/users" role="search">
+              <input type="text" class="inputtext" maxlength="100" aria-label="検索" placeholder="友達を見つける" spellcheck="false">
+              <button class="reDesignedBtn" type="submit" title="友達を見つける" aria-label="検索">
+                <span class="accessible_elem">友達を見つける</span>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
           </div>
-          <div class="header_right">
-            <div class="header-user">
+        </div>
+        <div class="header_right">
+          <div class="header-user">
+            <% if user_signed_in? %>
+              <%= link_to edit_user_registration_path do %>
+                <%= profile_img(current_user)%>
+                <%= current_user.name %>
+              <% end %>
+              </a>
+            <% end %>
+          </div>
+        </div>
+        <nav id="gnav" class="gnav">
+          <ul>
+            <button id="gnav-toggle-btn" class="gnav-toggle-btn">menu<span>&#x25BE;</span></button>
+            <div id="gnav-toggle" class="gnav-popup toggle">
               <% if user_signed_in? %>
-                <%= link_to edit_user_registration_path do %>
-                  <%= profile_img(current_user)%>
-                  <%= current_user.name %>
-                <% end %>
-                </a>
+                <li><%= link_to 'フォロー', users_path %></li>
+                <li><%= link_to "メッセージ", conversations_path %></li>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to 'ログイン', new_user_session_path %></li>
+                <li><%= link_to 'サインアップ', new_user_registration_path %></li>
               <% end %>
             </div>
-            </div>
-            <nav class="gnav">
-              <ul>
-                <% if user_signed_in? %>
-                  <li><%= link_to 'フォロー', users_path %></li>
-                  <li><%= link_to "メッセージ", conversations_path %></li>
-                  <ul class="toggle">
-                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-                    <!-- <li><%= link_to "広告を作成する", conversations_path %></li> -->
-                  </ul>
-                <% else %>
-                  <li><%= link_to 'ログイン', new_user_session_path %></li>
-                  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-                <% end %>
-                  <li>
-                  <%= link_to  notifications_index_path, class: "navbar-brand" do %>
-                    <i class="fa fa-bell fa-1x">
-                        <span id="unread_count"><%= @notifications_count %></span>
-                    </i>
-                  </li>
-                <% end %>
-              </ul>
-            </nav>
-          </div>
-        </div><!--header__inner-->
-      </header>
-      <section class="contents">
-        <% if flash[:notice] %>
-          <div class="alert alert-success">
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
-        <% if flash[:alert] %>
-          <div class="alert alert-danger">
-            <%= flash[:alert] %>
-          </div>
-        <% end %>
+            <li>
+            <%= link_to  notifications_index_path, class: "navbar-brand" do %>
+              <i class="fa fa-bell fa-1x">
+                  <span id="unread_count"><%= @notifications_count %></span>
+              </i>
+            <% end %>
+            </li>
+          </ul>
+        </nav>
+      </div><!--header__inner-->
+    </header>
+    <section class="contents">
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
 
-        <%= yield %>
+      <%= yield %>
 
       </section>
-    </div><!--modal-bg-->
   </body>
 </html>

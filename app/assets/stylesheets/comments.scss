@@ -16,3 +16,14 @@ p{
 p.right{
   text-align: right;
 }
+.field{
+  width: 350px;
+  margin: auto;
+}
+.new_comment{
+  input[type="submit"]{
+    margin: 12px auto 0;
+    padding: 5px 10px;
+    width: 350px;
+  }
+}

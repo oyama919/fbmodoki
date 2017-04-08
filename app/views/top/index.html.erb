@@ -54,9 +54,10 @@
   </aside>
 
   <div class="main-column main-col-mb">
-    <div class="top-edit">
+    <div id="topicModal" class="top-edit">
       <%= render partial: 'topics/form', locals: { topic: @topic }, remote: true%>
     </div>
+
     <div class="main-column-index">
       <% @topics.each do |topic| %>
         <div class="index-column main-col-mb">

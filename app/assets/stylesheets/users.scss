@@ -11,7 +11,7 @@
   input{
     padding: 5px 10px;
     width: 350px;
-    margin: 0 auto 5px;
+    margin: 0 auto 12px;
   }
   input[type="checkbox"]{
     width: auto;
@@ -19,8 +19,13 @@
   input[type="file"]{
     border: none;
   }
+  p.user{
+    display: inline-block;
+  }
   img{
-    width: 100px;
+    width: 50px;
+    margin-right: 10px;
+    display: inline-block;
   }
   .message-user{
     width: 300px;
@@ -43,13 +48,13 @@
   }
 }
 .my-page{
-  .title{
-    margin-bottom: 0;
-  }
   input{
     margin-bottom: 12px;
   }
   input[type="submit"]{
     margin: 0 auto;
+  }
+  input[type="submit"].btn-cancel{
+    margin-top: 12px;
   }
 }

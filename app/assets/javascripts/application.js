@@ -31,7 +31,21 @@ $(function(){
   $('.alert').ready(function(){
     setTimeout(function(){
       $('.alert').hide(1000);
-    },1200);
+    },5000);
+  });
+
+  $("#topicModal").click(function(){
+    $(this).addClass("modalWindow");
+    $(".topcic-content-box").addClass("editModal");
+    $('div.modal-bg').addClass("modalBg").click(function(){
+      $(this).removeClass("modalBg");
+      $(this).removeClass("modalWindow");
+      $(".topcic-content-box").removeClass("editModal");
+    });
+  });
+
+  $("#gnav-toggle-btn").click(function(){
+    $('#gnav-toggle').toggleClass('toggle');
   });
 
 });

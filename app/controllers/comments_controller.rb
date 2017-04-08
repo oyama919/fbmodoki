@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   def create
     # ログインユーザーに紐付けてインスタンス生成するためbuildメソッドを使用します。
     @comment = current_user.comments.build(comment_params)

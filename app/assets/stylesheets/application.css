@@ -63,7 +63,22 @@ a{
   color: #333;
   text-decoration: none;
 }
-/* ========== reset end ========== */
+a:hover{
+  background: none;
+  text-decoration: none;
+  color: #333;
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/* ========== リセット end ========== */
+
 
 body{
   background: #E9EBEE;
@@ -89,9 +104,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   content: "";
   display: block;
 }
-.toggle{
-  display: none;
-}
 h1.rootBtn{
   display: flex;
   align-items: center;
@@ -100,7 +112,7 @@ h1.rootBtn{
 }
 .header{
   background: #3B5998;
-  padding: 0 42px;
+  padding: 0 2%;
   box-sizing: border-box;
   height: 42px;
   display: flex;
@@ -112,6 +124,9 @@ h1.rootBtn{
   margin: auto;
   display: flex;
 }
+.header a:hover{
+  text-decoration: none;
+}
 h1 a{
   margin: -3px 0 0;
   display: block;
@@ -121,10 +136,16 @@ h1 a{
   font-size: 28px;
   line-height: 0;
 }
-.head-search{width: 450px;}
+.head-search{
+  width: 450px;
+}
+@media screen and (max-width: 900px){
+  .head-search{
+    width: 90%;
+  }
+}
 .header .search_box{
   position: relative;
-  width: auto;
 }
 .header .search_box button{
   position: absolute;
@@ -201,6 +222,7 @@ h1 a{
   font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
   display: inline-flex;
   align-items: center;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
 }
 .gnav ul{
   display: flex;
@@ -208,41 +230,134 @@ h1 a{
   align-items: center;
   height: 30px;
   margin: 0;
+  position: relative;
 }
 .gnav a{
   color: #fff;
-  padding:  0 10px;
+  padding:  8px 10px;
   font-size: 12px;
   font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
   position: relative;
-  height: 30px;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+}
+.gnav a .fa-bell{
+  color: #bfbfbf;
 }
 .header-user a:hover,.gnav a:hover{
   background: #355089;
   color: #fff;
 }
-.gnav li a::after{
-  background: rgba(0, 0, 0, .1);
-  content: '';
-  display: block;
-  height: 18px;
-  left: -1px;
-  position: absolute;
-  top: 0;
-  width: 1px;
+.gnav a{
+  text-decoration: none;
 }
-.gnav a{text-decoration: none;}
 .gnav .navbar-brand{
   border: none;
+  padding: 0;
   height: 20px;
 }
+.gnav .navbar-brand:hover{
+  background: none;
+}
+.gnav .navbar-brand i:hover{
+  color: #787878;
+}
+.gnav-toggle-btn{
+  display: none;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 0;
+  border-radius: 3px;
+  padding: 12px 10px 15px;
+  font-family: -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+}
+.gnav-toggle-btn>span{
+  vertical-align: middle;
+}
+.gnav-toggle-btn:hover{
+  background: #355089;
+}
+.gnav-popup{
+  display: inherit;
+}
+@media screen and (max-width: 673px){
+  .contents{
+    width: 100%;
+  }
+  .header__inner{
+    width: 100%;
+  }
+  .gnav {
+    flex: 0 0 auto;
+  }
+  .gnav-toggle-btn{
+    display: inline-block;
+  }
+  .gnav-popup{
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    z-index: 10;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+    transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  }
+  .gnav-popup:before{
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #355089 transparent;
+    z-index: 1;
+    background-clip: padding-box;
+  }
+  .gnav-popup:after{
+    position: absolute;
+    top: -4px;
+    right: 6px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4px 4px 4px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 1;
+    background-clip: padding-box;
+  }
+  .gnav-popup li{
+    display: block;
+  }
+  .gnav-popup a{
+    color: #333;
+    width: 100%;
+    transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  }
+  .gnav-popup a:hover{
+    background: none;
+    text-decoration: none;
+    color: #333;
+  }
+}
+
+
 .contents{
   padding-top: 12px;
   font-size: 14px;
   line-height: 19px;
   font-family: "San Francisco", -apple-system, system-ui, ".SFNSText-Regular", "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif;
   color: #1d2129;
-  width: 1020px;
+  width: 1024px;
   margin: auto;
   position: relative;
 }
@@ -266,16 +381,49 @@ input[type="submit"]:hover{
   color: #fff;
   background: #355089;
 }
-/*form .button-large{
-  padding: 5px;
-  width: 300px;
-}*/
+
 form .btn-cancel{
   color: #333;
-  background: rgba(255,255,255,0.5);
-  border: 1px solid #333;
+  background: rgba(235,235,235,0.1);
+  border: 1px solid #ccc;
 }
 form .btn-cancel:hover{
   background: rgba(0,0,0,0.56);
   border-color: transparent;
 }
+
+
+
+/* ========== モーダル ========== */
+.modalBg{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: opacity .3s, bottom 0s .3s;
+  z-index: 3;
+}
+
+@media screen and (min-width: 673px){
+  .modalWindow{
+    height: 300px;
+    z-index:3;
+    position: relative;
+  }
+  .editModal{
+    min-height: 180px;
+  }
+}
+/* ========== モーダル end ========== */
+
+
+
+/* ========== トグル ========== */
+@media screen and (max-width: 673px){
+  .toggle{
+    display: none;
+  }
+}
+/* ========== トグル end ========== */
