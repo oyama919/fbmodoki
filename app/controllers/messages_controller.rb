@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
       redirect_to conversation_messages_path(@conversation)
     else
       session[@message] = current_user
-      redirect_to :back
+      redirect_to :back, alert:"未入力の項目があります"
     end
   end
 

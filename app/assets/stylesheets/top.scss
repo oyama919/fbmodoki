@@ -133,6 +133,7 @@
   resize: vertical;
   padding: 10px;
   box-sizing: border-box;
+  transition: .5s ease-in-out;
 }
 .top-edit .topcic-title-box,.top-edit .topcic-content-box{
   display: flex;

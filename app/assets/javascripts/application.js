@@ -37,10 +37,12 @@ $(function(){
   $("#topicModal").click(function(){
     $(this).addClass("modalWindow");
     $(".topcic-content-box").addClass("editModal");
+    $("#topic_content").css("font-size",22);
     $('div.modal-bg').addClass("modalBg").click(function(){
       $(this).removeClass("modalBg");
-      $(this).removeClass("modalWindow");
-      $(".topcic-content-box").removeClass("editModal");
+      $("#topicModal").removeClass("modalWindow");
+      $("div.topcic-content-box").removeClass("editModal");
+      $("#topic_content ").css("font-size",14);
     });
   });
 

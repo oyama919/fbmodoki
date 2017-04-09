@@ -22,8 +22,8 @@ class CommentsController < ApplicationController
           })
         end
       else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html { render :new, alert:"未入力の項目があります" }
+        format.json { render json: @comment.errors, status: :unprocessable_entity}
       end
     end
   end
