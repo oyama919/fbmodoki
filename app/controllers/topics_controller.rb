@@ -19,7 +19,6 @@ class TopicsController < ApplicationController
     @topic.user_id = current_user.id
     if @topic.save
       redirect_to root_path, notice:"投稿されました"
-      NoticeMailer.sendmail_topic(@topic).deliver
     else
       redirect_to root_path, alert:"未入力の項目があります"
       @topic = Topic.new(topics_params)
