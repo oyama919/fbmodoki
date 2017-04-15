@@ -29,16 +29,13 @@ class TopicsController < ApplicationController
   end
 
   def update
-    if @topic.update(topics_params)
-      redirect_to topics_path
-    else
-      render action: 'edit'
-    end
+    @topic.update(topics_params)
+    redirect_to topics_path, notice:"投稿を更新しました"
   end
 
   def destroy
     @topic.destroy
-    redirect_to root_path, alert:"削除しました"
+    redirect_to root_path, alert:"投稿を削除しました"
   end
 
   def show

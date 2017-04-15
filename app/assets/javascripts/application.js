@@ -34,15 +34,19 @@ $(function(){
     },5000);
   });
 
+  $("#topEditBtn").prop("disabled", true);
+  
   $("#topicModal").click(function(){
-    $(this).addClass("modalWindow");
+    $("#topicModal").addClass("modalWindow");
     $(".topcic-content-box").addClass("editModal");
     $("#topic_content").css("font-size",22);
+    $("#topEditBtn").prop("disabled", false);
     $('div.modal-bg').addClass("modalBg").click(function(){
-      $(this).removeClass("modalBg");
+      $("div.modal-bg").removeClass("modalBg");
       $("#topicModal").removeClass("modalWindow");
       $("div.topcic-content-box").removeClass("editModal");
       $("#topic_content ").css("font-size",14);
+      $("#topEditBtn").prop("disabled", true);
     });
   });
 
