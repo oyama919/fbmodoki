@@ -38,6 +38,7 @@ class TopicsController < ApplicationController
 
   def destroy
     @topic.destroy
+    redirect_to root_path, alert:"削除しました"
   end
 
   def show
