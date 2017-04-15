@@ -35,7 +35,7 @@
     <a href="">イベント</a>
   </div>
 </section>
-<section class="center-column cf">
+<section id="centerColumn" class="center-column cf">
 
   <aside class="aside">
     <div class="advertisement main-col-mb">
@@ -69,12 +69,14 @@
               <%= profile_img(topic.user) %>
             <% end %>
             <div class="index-column__head__text-box">
-              <p class="index-column-name"><%= link_to topic_path(topic) do %><%= topic.user.name %><% end %></p>
+              <p class="index-column-name"><%= topic.user.name %></p>
               <p class="index-column-time"><%= topic.created_at.strftime("%y/%m/%d %p %l:%M") %></p>
             </div>
           </div>
+
           <p class="index-column-title"><%= topic.title %></p>
           <p class="index-column-text"><%= topic.content %></p>
+          <%= link_to topic_path(topic) do %>コメントする<% end %>
           <% if user_signed_in? %>
             <% if topic.user.id == current_user.id %>
               <div class="index-column__foot">

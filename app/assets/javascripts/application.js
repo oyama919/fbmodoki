@@ -13,10 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
 //= require_tree .
 
+
 $(function(){
+
+  $('.alert').ready(function(){
+    setTimeout(function(){
+      $('.alert').hide(1000);
+    },5000);
+  });
 
   $("#left_nav-MoreTxtBtn").click(function(){
       $("li.left_nav_item:nth-child(n+11)").css("display","block");
@@ -28,24 +34,18 @@ $(function(){
       window.location.href = "/";
   });
 
-  $('.alert').ready(function(){
-    setTimeout(function(){
-      $('.alert').hide(1000);
-    },5000);
-  });
-
-  $("#topEditBtn").prop("disabled", true);
-  
-  $("#topicModal").click(function(){
+  $('#centerColumn').on('click','#topicModal',function(){
+    $("#topEditBtnDiv").show();
     $("#topicModal").addClass("modalWindow");
     $(".topcic-content-box").addClass("editModal");
     $("#topic_content").css("font-size",22);
     $("#topEditBtn").prop("disabled", false);
     $('div.modal-bg').addClass("modalBg").click(function(){
+      $("#topEditBtnDiv").hide();
       $("div.modal-bg").removeClass("modalBg");
       $("#topicModal").removeClass("modalWindow");
       $("div.topcic-content-box").removeClass("editModal");
-      $("#topic_content ").css("font-size",14);
+      $("#topic_content").css("font-size",14);
       $("#topEditBtn").prop("disabled", true);
     });
   });
